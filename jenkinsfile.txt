@@ -1,0 +1,23 @@
+pipeline 
+  {   agent any
+    stages 
+      {
+        stage('Build') 
+        {  steps 
+             { echo "Build process successfully done" : date and time}
+        }
+        stage('Deploy') 
+        {  steps 
+             { echo 'Deploy Job successfully executed'}
+        }
+        stage('Test') 
+        {  steps 
+             { echo 'Test Job successfully executed'}
+        }
+        stage('Release') 
+        {  steps 
+             { echo 'Release Job successfully executed'}
+        }
+      }
+      
+  }
