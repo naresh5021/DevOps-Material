@@ -1,0 +1,88 @@
+__RequestVerificationToken
+session_state
+id_token
+access_token_ID
+Bearer token
+login_temp_session_id
+onetimetoken
+csrf
+CSRF_TOKEN_COOKIE
+StateProperties
+client-request-id
+AuthenticationProperties
+nonce
+pageViewId
+__VIEWSTATE
+__VIEWSTATEGENERATOR
+Request-Id
+
+
+customerId":"ae89f7b9-b969-48e8-bf18-ff757309eee1"
+customerId":"(.*?)"
+
+"responsibleId":"5bd4dbd8-7dee-490e-8032-3f2a6cb6bb6c"
+"responsibleId":"(.*?)"
+
+"firstName":"Kyle"
+"firstName":"(.*?)"
+
+"responsibleId":"a466bee3-2c36-438f-b9c9-16c428fa10e0"
+"responsibleId":"(.*?)"
+
+"id":"9d0afb08-acf7-46f6-a093-bf3113714a87"
+"id":"(.*?)"
+
+"ssn":"*****4279"
+"ssn":"(.*?)"
+
+"setId":"11d980e6-c715-4a40-9e83-16fc500d608d"
+"setId":"(.*?)"
+
+
+${__time(yyyy-MM-dd,)}
+
+
+"accounts":[{"id":"2855e73b-4b1f-4a3a-9cd8-b633077c80fc"
+"accounts":\[\{\"id":"(.*?)"
+
+"setId":"fcc03c81-8fce-4e90-8544-0996820a2648"
+"setId":"(.*?)"
+
+
+&session_state=8nrlelhiMnQgPXrt9JXxASAfLfQMnodqw83YS9n32Gc.6fc96b30707790f6592fabedb1f4a2a9
+&session_state=(.*?)\sS
+${C_Session_State_ID}
+
+{"id_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjRGNTIwODE1MDNBM0YwMDEyMEQ4MEUyMjFBQ0ExRjE1QkNDNTU5NzQiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJUMUlJRlFPajhBRWcyQTRpR3NvZkZiekZXWFEifQ.eyJuYmYiOjE2NjkxMjk1MTIsImV4cCI6MTY2OTEyOTgxMiwiaXNzIjoiaHR0cHM6Ly9zcGEtcDUuZGV2LndrZWxtcy5jb20vaWRlbnRpdHkiLCJh0poUHIOxCPpECV8kTFnZK3mFcwW97zQ",
+
+"id_token":"(.*?)",
+${C_id_token_ID}
+
+{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjRGNTIwODE1MDNBM0YwMDEyMEQ4MEUyMjFBQ0ExRjE1QkNDNTU5NzQiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJUMUlJRlFPajhBRWcyQTRpR3NvZkZiekZXWFEifQ.eyJuYmYiOjE2NjkxMjk1MTIsImV4cCI6MTY2OTEyOTgxMiwiaXNzIjoiaHR0cHM6Ly9zcGEtcDUuZGV2LndrZWxtcy5jb20vaWRlbnRpdHkiLCJh0poUHIOxCPpECV8kTFnZK3mFcwW97zQ",
+
+"access_token":"(.*?)",
+
+${C_access_token_ID}
+
+
+Loop Controller:	${C_mpi_policynumber1_matchNr}
+
+JSR223 PreProcessor:
+
+int arrCount = Integer.parseInt(vars.get("C_mpi_policynumber1_matchNr"));
+int count = Integer.parseInt(vars.get("__jm__Loop Controller__idx"));
+log.info(arrCount.toString());
+log.info(count.toString());
+String[] arr = new String[arrCount];
+//int arrCount1= arrCount-1;
+
+String Valuesss="";
+
+if(count == 0)
+{  Valuesss = vars.get("C_mpi_policynumber1_"+(0+1));  }
+else
+{  Valuesss = vars.get("C_mpi_policynumber1_"+(count+1));  }
+
+log.info(Valuesss);
+vars.put("PP_FinalValue",Valuesss);
+//"C_mpi_policynumber1_matchNr" = arrCount -1;
